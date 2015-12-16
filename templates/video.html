@@ -1,0 +1,23 @@
+{% extends 'page.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.18.2/mediaelementplayer.min.css" />
+
+<div class="video-container">
+    <div>
+        {% block video_inner %}
+        {{ contents | safe }}
+        {% endblock %}
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.18.2/mediaelement-and-player.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('video').mediaelementplayer();
+});
+</script>
+
+{% endblock %}

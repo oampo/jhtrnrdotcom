@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="canonical" href="{{ site.url }}{{ url }}">
+
+<!-- Fonts -->
+<link rel="stylesheet" href="/fonts/gandhi_serif/regular/stylesheet.css">
+<link rel="stylesheet" href="/fonts/gandhi_serif/bold/stylesheet.css">
+<link rel="stylesheet" href="/fonts/gandhi_serif/italic/stylesheet.css">
+<link rel="stylesheet" href="/fonts/gandhi_serif/bold_italic/stylesheet.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
+<link rel="stylesheet" href="/css/main.css">
+
+<div id="container">
+    <div id="sidebar">
+        {% block sidebar %}{% endblock %}
+    </div>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</div>

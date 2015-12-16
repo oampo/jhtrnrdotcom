@@ -1,0 +1,7 @@
+{% extends 'video.html' %}
+
+{% block video_inner %}
+<div class="aspect-16-9 quality-720p">
+    {{ contents | safe }}
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block sidebar %}
+<nav>
+    <ul>
+        <li><a href="/">=</a></li>
+        <li><a href="{% if previous.url %}{{ previous.url }}{% else %}#{% endif %}" {% if not previous.url %}disabled{% endif %}>&lt;</a></li>
+        <li><a href="{% if next.url %}{{ next.url }}{% else %}#{% endif %}" {% if not next.url %}disabled{% endif %}>&gt;</a></li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block content %}
+{{ contents | safe }}
+{% endblock %}
