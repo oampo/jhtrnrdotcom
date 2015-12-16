@@ -184,7 +184,8 @@ if __name__ == "__main__":
 
     metadata = {
         "site": {
-            "url": "https://www.jhtrnr.com"
+            "url": "https://www.jhtrnr.com",
+            "title": "Joe Turner"
         }
     }
     files = paths(indir, IGNORE_PATTERNS)

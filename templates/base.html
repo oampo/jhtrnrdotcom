@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{% if description %}
+<meta name="description" content="{{ description }}">
+{% endif %}
 
 <link rel="canonical" href="{{ site.url }}{{ url }}">
 
@@ -13,6 +16,14 @@
 <!-- CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
 <link rel="stylesheet" href="/css/main.css">
+
+<title>
+    {% if title %}
+    {{ title }}
+    {% else %}
+    {{ site.title }}
+    {% endif %}
+</title>
 
 <div id="container">
     <div id="sidebar">
