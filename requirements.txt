@@ -1,0 +1,5 @@
+docopt
+python-frontmatter
+jinja2
+beautifulsoup4
+html5lib
