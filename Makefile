@@ -4,7 +4,7 @@ build: clean
 	python generate.py content build
 
 watch:
-	chokidar 'content/**/*' 'templates/**/*' 'public/**/*' generate.py -c "$(MAKE) build" --initial
+	chokidar 'content/**/*' 'templates/**/*' 'public/**/*' generate.py -c "$(MAKE) build" --initial --follow-symlinks
 
 run:
 	cd build && http-server
