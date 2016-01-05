@@ -94,10 +94,17 @@ def collection(files, metadata, name, pattern):
     if not "collections" in metadata:
         collections = metadata["collections"] = {}
     collection = collections[name] = []
+
     for path, file in files:
-        if re.match(pattern, path):
+        if file.get("no-collections", False):
+            yield path, file
+            continue
+
+        should_collect = not file.get("no-collections", False)
+        if should_collect and re.match(pattern, path):
             collection.append(file)
             file["collection"] = name
+
         yield path, file
 
 def sort_collections(files, metadata):
