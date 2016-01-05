@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<title>Redirecting...</title>
+
+<link rel="canonical" href="{{ site.url }}{{ destination }}">
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="0; url={{ site.url }}{{destination }}" />
+
+<h1>Redirecting...</h1>
+<p>
+    <a href='{{ site.url }}{{ destination }}'>
+        Click here if you are not redirected.
+    </a>
+</p>
+
+<script>
+document.location.href = "{{ site.url }}{{ destination }}";
+</script>
